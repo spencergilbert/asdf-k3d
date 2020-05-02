@@ -1,6 +1,6 @@
 # asdf-k3d
 
-![Build](https://github.com/spencergilbert/asdf-k3d/workflows/Build/badge.svg)
+![Main](https://github.com/spencergilbert/asdf-k3d/workflows/Main/badge.svg)
 
 [k3d](https://github.com/rancher/k3d) plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 
