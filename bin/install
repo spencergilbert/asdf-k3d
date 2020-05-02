@@ -15,7 +15,7 @@ install_k3d() {
 	local bin_install_path="$install_path/bin"
 	local download_url="$(get_download_url $version)"
 
-	mkdir -p "$(bin_install_path)"
+	mkdir -p "${bin_install_path}"
 
 	local bin_path="${bin_install_path}/k3d"
 	echo "Downloading k3d from ${download_url}"
