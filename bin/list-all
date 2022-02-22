@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-releases_path=https://api.github.com/repos/rancher/k3d/releases
-cmd="curl -s"
+releases_path=https://api.github.com/repos/k3d-io/k3d/releases
+cmd="curl -fsSL"
 if [ -n "$GITHUB_API_TOKEN" ]; then
 	cmd="$cmd -H 'Authorization: token $GITHUB_API_TOKEN'"
 fi
