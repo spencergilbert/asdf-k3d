@@ -1,24 +1,22 @@
-name: Main
+name: Build
+
 on:
   push:
-    paths-ignore:
-      - "**.md"
+    branches:
+      - main
   pull_request:
-    paths-ignore:
-      - "**.md"
-  schedule:
-    - cron: "0 0 * * *"
 
 jobs:
   plugin_test:
+    name: asdf plugin test
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os:
+          - ubuntu-latest
+          - macos-latest
     runs-on: ${{ matrix.os }}
     steps:
       - name: asdf_plugin_test
-        uses: asdf-vm/actions/plugin-test@v1.1.0
+        uses: asdf-vm/actions/plugin-test@v1
         with:
-          command: k3d --version
-        env:
-          GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          command: k3d --help
