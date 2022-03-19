@@ -1,15 +1,59 @@
-# asdf-k3d
+<div align="center">
 
-[![GitHub Actions Status](https://github.com/spencergilbert/asdf-k3d/workflows/Main/badge.svg?branch=master)](https://github.com/spencergilbert/asdf-k3d/actions)
+# asdf-k3d [![Build](https://github.com/spencergilbert/asdf-k3d/actions/workflows/build.yml/badge.svg)](https://github.com/spencergilbert/asdf-k3d/actions/workflows/build.yml) [![Lint](https://github.com/spencergilbert/asdf-k3d/actions/workflows/lint.yml/badge.svg)](https://github.com/spencergilbert/asdf-k3d/actions/workflows/lint.yml)
 
-[k3d](https://github.com/rancher/k3d) plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 
-## Install
+[k3d](https://k3d.io/) plugin for the [asdf version manager](https://asdf-vm.com).
 
+</div>
+
+# Contents
+
+- [Dependencies](#dependencies)
+- [Install](#install)
+- [Contributing](#contributing)
+- [License](#license)
+
+# Dependencies
+
+- `bash`, `curl`: generic POSIX utilities.
+
+# Install
+
+Plugin:
+
+```shell
+asdf plugin add k3d
+# or
+asdf plugin add k3d https://github.com/spencergilbert/asdf-k3d.git
 ```
-asdf plugin-add k3d https://github.com/spencergilbert/asdf-k3d.git
+
+k3d:
+
+```shell
+# Show all installable versions
+asdf list-all k3d
+
+# Install specific version
+asdf install k3d latest
+
+# Set a version globally (on your ~/.tool-versions file)
+asdf global k3d latest
+
+# Now k3d commands are available
+k3d --help
 ```
 
-## Use
+Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
+install & manage versions.
 
-Check out the [asdf](https://github.com/asdf-vm/asdf) readme for instructions on how to install and manage versions of k3d.
+# Contributing
+
+Contributions of any kind welcome! See the [contributing guide](contributing.md).
+
+[Thanks goes to these contributors](https://github.com/spencergilbert/asdf-k3d/graphs/contributors)!
+
+# License
+
+See [LICENSE](LICENSE) © [Spencer Gilbert](https://github.com/spencergilbert/)
+
