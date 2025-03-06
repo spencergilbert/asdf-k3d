@@ -9,6 +9,6 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: GoogleCloudPlatform/release-please-action@v4.1.4
+      - uses: GoogleCloudPlatform/release-please-action@v4.1.5
         with:
           release-type: simple
